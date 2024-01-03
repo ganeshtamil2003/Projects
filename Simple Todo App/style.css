@@ -58,6 +58,8 @@ button {
 
 button:hover {
   background-color: black;
+  transition: background-color 0.2s ease-in-out;
+
 }
 
 ul {
@@ -89,4 +91,18 @@ li:last-child {
 }
 .delete-todo-btn:hover {
   background-color: rgb(183, 57, 57);
+  transition: background-color 0.2s ease-in-out;
 }
+
+
+li {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
