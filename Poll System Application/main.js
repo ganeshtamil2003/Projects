@@ -26,7 +26,7 @@ function displayResult() {
   const result = document.getElementById("result");
   result.innerHTML = "";
   options.forEach((option) => {
-    const percentage =((option.votes / getTotalVotes()) * 100).toFixed(2) || 0;
+    const percentage = ((option.votes / getTotalVotes()) * 100).toFixed(2) || 0;
     const barwidth = percentage > 0 ? percentage + "%" : "0%";
 
     const optionResult = document.createElement("div");
