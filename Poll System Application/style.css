@@ -1,6 +1,5 @@
 body{
     background-color: #e6e0e0;
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -12,10 +11,11 @@ body{
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     text-align: center;
     animation: cardAnimation 1s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
+  
 @keyframes cardAnimation{
     0%{
         transform: scale(0);
@@ -32,6 +32,8 @@ h1{
     color: #ff1493;
     font-size: 32px;
     opacity: 1;
+    font-family: 'Open Sans';
+
 }
 
 .poll{
@@ -42,17 +44,21 @@ h2{
     color: #ff1493;
     font-size: 24px;
     margin-bottom: 20px;
+    font-family: 'Roboto';
+
 }
 
 .options{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Montserrat';
 }
 
 .option{
     margin-bottom: 15px;
     font-weight: 600;
+    font-size: 20px;
     color: black;
 }
 
@@ -82,7 +88,7 @@ label{
 button{
     background-color: #ff1493;
     font-weight: 600;
-    font-size: medium;
+    font-size: 18px;
     color: #fff;
     padding: 10px 100px;
     border: none;
@@ -103,6 +109,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: Arial;
 }
 
 .option-result{
@@ -118,7 +125,7 @@ button:hover{
 
 .bar-container{
     flex: 3;
-    background-color: rgb(223, 217, 217);
+    background-color: rgb(219, 213, 213);
     height: 10px;
     margin-left: 20px;
     border-radius: 4px;
