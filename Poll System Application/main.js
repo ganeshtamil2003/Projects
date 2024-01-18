@@ -25,14 +25,25 @@ function submitVote() {
 function displayResult() {
   const result = document.getElementById("result");
   result.innerHTML = "";
-  const percentage = ((option.votes / getTotalVotes()) * 100).toFixed(2) || 0;
-  const barwidth=percentage>0?percentage+"%":"0%";
-}
+  options.forEach((option) => {
+    const percentage =((option.votes / getTotalVotes()) * 100).toFixed(2) || 0;
+    const barwidth = percentage > 0 ? percentage + "%" : "0%";
 
+    const optionResult = document.createElement("div");
+    optionResult.className = "option-result";
+    optionResult.innerHTML = `
+  <span class ="option-text">${option.text}</span>
+  <div class ="bar-container">
+      <div class="bar" style="width:${barwidth}"></div>
+  </div>
+  <span class="percentage">${percentage}%</span>    
+  `;
+    result.appendChild(optionResult);
+  });
+}
 
 function getTotalVotes() {
   return options.reduce((total, option) => total + option.votes, 0);
 }
 
-// const t=getTotalVotes();
-// console.log(t);
+displayResult();
